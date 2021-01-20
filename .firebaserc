@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "github722": {
+      "hosting": {
+        "github-profile-searcher": [
+          "github722"
+        ]
+      }
+    }
+  }
+}

@@ -117,8 +117,16 @@
               "devServerTarget": "github-profile-searcher:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
-  "defaultProject": "github-profile-searcher"
+    }
+  },
+  "defaultProject": "github-profile-searcher",
+  "cli": {
+    "analytics": false
+  }
 }
