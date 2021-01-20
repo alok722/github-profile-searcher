@@ -4,7 +4,7 @@
   <img alt="Maintenance" src="https://img.shields.io/badge/Maintained-yes-blue.svg" />
 </p>
 
-> 
+> an angular webapp consuming *GitHub api* to search and display user details based on github username. It also consumes firebase for authentication purpose.
 
 ## 📸 screenshot
 ![demo](./src/assets/demo-2.JPG)
