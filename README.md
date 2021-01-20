@@ -6,6 +6,8 @@
 
 > an angular webapp consuming *GitHub api* to search and display user details based on github username. It also consumes firebase for authentication purpose.
 
+## 🏠 [Home](https://github722.web.app/)
+
 ## 📸 screenshot
 ![demo](./src/assets/demo-2.JPG)
 ![demo](./src/assets/demo-1.JPG)
