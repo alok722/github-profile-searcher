@@ -27,11 +27,11 @@ export class SigninComponent implements OnInit {
       .signIn(email, password)
       .then((res) => {
         this.router.navigateByUrl('/');
-        this.toastr.success('SignIn Success');
+        this.toastr.success('SignIn Success!');
       })
       .catch((err) => {
         console.log(err.message);
-        this.toastr.error('SignIn failed');
+        this.toastr.error('SignIn failed', err.message);
       });
   }
 

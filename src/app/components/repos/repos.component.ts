@@ -20,8 +20,7 @@ export class ReposComponent implements OnInit, OnChanges {
     if (this.repoUrl) {
       this.githubService.getRepos(this.repoUrl).subscribe(
         (repos: []) => {
-          this.repos = repos;
-          console.log('repos details', this.repos)
+          this.repos = this.shuffle(repos);
           this.ref.detectChanges();
         },
         (err) => {
@@ -29,6 +28,10 @@ export class ReposComponent implements OnInit, OnChanges {
         }
       );
     }
+  }
+
+  shuffle(array) {
+    return array.sort(() => Math.random() - 0.5);
   }
 
 }

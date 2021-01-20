@@ -1,22 +1,37 @@
-<div class="card user-card">
-  <div class="background bg-info">
-    <img [src]="user.avatar_url" alt="" class="img-fluid rounded-circle profile-pic border-2 border-white">
+<div class="card user-card shadow mb-5 bg-white rounded p-2">
+  <div>
+    <img [src]="user.avatar_url" alt="" class="img-fluid rounded-circle profile-pic border-2">
   </div>
   <div class="card-body">
     <h5 class="card-title">
       {{ user.name }}
     </h5>
-    <p class="card-text">
-      BIO: {{ user.bio }}
+    <p class="card-text" *ngIf="user.blog">
+      <a [href]="user.blog">{{ user.blog }}</a>
     </p>
     <p class="card-text">
-      Company: {{ user.company }}
+      {{ user.bio }}
     </p>
     <p class="card-text">
-      Blog: {{ user.blog }}
+      <b>Company:</b> {{ user.company }}
     </p>
     <p class="card-text">
-      Update At: {{ user.updated_at | date }}
+      <b>Location:</b> {{ user.location }}
+    </p>
+    <p class="card-text">
+      <b>Github Followers count:</b> {{ user.followers }}
+    </p>
+    <p class="card-text">
+      <b>Github Following count:</b> {{ user.following }}
+    </p>
+    <p class="card-text" *ngIf="user.twitter_username">
+      <b>Twitter handle: </b>{{ user.twitter_username  }}
+    </p>
+    <p class="card-text">
+      <b>Created At: </b>{{ user.created_at | date  }}
+    </p>
+    <p class="card-text">
+      <b>Updated At: </b>{{ user.updated_at | date  }}
     </p>
   </div>
 </div>

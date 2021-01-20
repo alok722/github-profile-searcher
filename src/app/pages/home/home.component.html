@@ -1,19 +1,11 @@
 <div class="container">
-  <form
-    class="form-inline mt-4 d-flex justify-content-center"
-    (ngSubmit)="handleFind()"
-  >
+  <form class="form-inline mt-4 d-flex justify-content-center" (ngSubmit)="handleFind()">
     <div class="form-group">
-      <label for="userName">User Name</label>
-      <input
-        [(ngModel)]="userName"
-        type="text"
-        id="userName"
-        class="form-control mx-sm-3"
-        name="userName"
-      />
+      <label for="userName">UserName</label>
+      <input [(ngModel)]="userName" type="text" placeholder="type here. . ." id="userName" autocomplete="off"
+        class="form-control mx-sm-3" name="userName" />
     </div>
-    <button type="submit" class="btn btn-primary mb-2">Find User</button>
+    <button type="submit" class="btn btn-primary btn-sm">Find User</button>
   </form>
 
   <!-- to render error -->

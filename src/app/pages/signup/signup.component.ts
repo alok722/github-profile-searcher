@@ -27,11 +27,10 @@ export class SignupComponent implements OnInit {
       .signUp(email, password)
       .then((res) => {
         this.router.navigateByUrl('/');
-        this.toastr.success('Signup Success');
+        this.toastr.success('Signup Success!');
       })
       .catch((err) => {
-        console.log(err.message);
-        this.toastr.error('Singup failed');
+        this.toastr.error('Singup failed', err.message);
       });
   }
 

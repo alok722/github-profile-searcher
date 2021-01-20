@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
     private toastr: ToastrService
   ) {
     auth.getUser().subscribe((user) => {
-      console.log('firebase user', user);
       this.email = user?.email;
     });
   }

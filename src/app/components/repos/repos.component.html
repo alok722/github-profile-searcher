@@ -1,9 +1,13 @@
-<div *ngFor="let repo of repos" class="list-group">
-  <a
-    [href]="repo.html_url"
-    target="_blank"
-    class="list-group-item list-group-item-action"
-  >
-    {{ repo.name }}
-  </a>
+<div *ngFor="let repo of repos" class="card user-card shadow mb-2 bg-white rounded p-2">
+  <div class="card-body">
+    <h5 class="card-title">
+      <a [href]="repo.html_url" target="_blank">
+        {{ repo.name }}
+      </a>
+    </h5>
+    <a *ngIf="repo.homepage" target="_blank" [href]="repo.homepage" class="badge badge-dark">Home</a>
+    <p class="card-text">
+      {{ repo.description }}
+    </p>
+  </div>
 </div>
